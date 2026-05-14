@@ -1,0 +1,3039 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="en-gb">
+    <title>Pixel Programming Language</title>
+    <script src="data.js"></script>
+    </head>
+    <body style="background-color:black;">
+ 
+    <canvas id="myCanvas" width="1280" height="720"></canvas>
+   
+    <script>
+      let t2s=0; let t2red=[]; let t2green=[]; let t2blue=[]; let p=0; let t2height=0; let t2width=0; let t2fullscreen=0;
+      let key2; let t2p2=0; let key3; let t2x=7; let t2y=14; let t2z=0; let t2x2=7; let t2y2=14; let t2z2=0; let t2symbol=0; let t2symbola=[]; let t2sn2=0; let t2sn=0;
+      let t2symbolcursor=0; let t2red2=0; let t2green2=180; let t2blue2=240; let t2counta=0; let t2backspace=1; let t2controlmove=0; let t2textheight=0; let t2textheight2=1;
+      let t2sn3=0; let t2textheightequal=0; let t2textheightequal2=0; let t2textheightequal3=0; let t2movedown=0; let t2pass2=0; let t2identifysymbol=0; let t2identifysymbol2=0;
+      let t2jdata=[]; let t2jdataa2=[]; let t2jdata3; let t2jdata4; let t2pass3=0; let t2writesaved=0; let t2run=0;let t2passa2=0; let t2pass4=0; let t2pass5=0;
+      let t2pass6=0; let t2pass7=0; let t2pass8=0; let t2num=0; let t2num2=0; let t2num3=0; let t2num4=0; let t2num5=0; let t2numnew=0; let t2acoordinater=0; let t2acoordinateg=0;
+      let t2acoordinateb=0; let t2vara=[]; let t2varavalue=[]; let t2vr=[]; let t2vr2=[]; let t2vg=[]; let t2vg2=[]; let t2vb=[]; let t2vb2=[];
+      let t23num=0; let t23num2=0; let t23num3=0; let t23num4=0; let t23num5=0; let t2pass12=0; let t2pb2=0; let t2pbc2=0; let t2rnew=0; let t2gnew=0; let t2bnew=0; let t2result=0;
+      let t2result2=0; let t2variablecount=0; let t2variable=0; let t2var2=0; let t2var3=0; let t2var4=0; let t2var5=0; let t2acoordinatex=0; let t2acoordinatey=0;
+      let t2vx=[]; let t2vx2=[]; let t2vy=[]; let t2vy2=[]; let t2xnew=0; let t2ynew=0; let t2result3=0; let t2vare4=0; let t2vare5=0; let t2complete2=0;
+      let t2vap2=0; let t2vap22=0; let t2vap3=0; let t2vap33=0; let t2keyg=0; let t2symbola2=[]; let t2symbola3=[]; let t2p221=0; let t2p222=0; let t2p223=0;
+      let t2p224=0; let t2p225=0; let t2run2=0; let t2passn2=0; let t2sn4=0; let t2textheightcopy=0; let t2textheight2copy=0; let elem; let textToSave; let t2d22=1;
+
+let globalvar=0; //global variable purpose 
+let t2wvar2=-1; let t2wvar3=0; //while variable
+let t2spacekey2=0; //for next line using enter
+let t2syssa=[]; let t2aa=0; let t2aa2=0; let t2aa3=0;  let t2output=[]; let t2passaa=0;
+
+      let fileName;
+      let blob;
+      let url;
+      let a;
+      let c = document.getElementById("myCanvas");
+      let ctx = c.getContext("2d");
+      function t2fpsset(){
+      t2fullscreen=1;
+      }
+      document.addEventListener("keydown", mup22);
+      function mup22(event){
+      key2=event.key;
+      }
+      document.addEventListener("keyup", mup23);
+      function mup23(event){
+      key3=event.key;
+      }
+      function rajneetwebos(){
+      ctx.clearRect(0,0,1280,720);
+      while(t2p2<57600 && t2symbolcursor!=2){
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=t2p2+1;
+      }
+      t2p2=0;
+      while(t2p2<144*4 && t2symbolcursor==2){
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=t2p2+1;
+      }
+      if(t2symbolcursor==1 && t2backspace==1){
+      t2p2=(t2y2*320)+t2x2+3;
+      t2red[t2p2]=16; t2green[t2p2]=244; t2blue[t2p2]=54;
+      t2p2=((t2y2-1)*320)+t2x2+3;
+      t2red[t2p2]=16; t2green[t2p2]=244; t2blue[t2p2]=54;
+      t2p2=((t2y2-2)*320)+t2x2+3;
+      t2red[t2p2]=16; t2green[t2p2]=244; t2blue[t2p2]=54;
+      t2p2=((t2y2-3)*320)+t2x2+3;
+      t2red[t2p2]=16; t2green[t2p2]=244; t2blue[t2p2]=54;
+      t2p2=((t2y2-4)*320)+t2x2+3;
+      t2red[t2p2]=16; t2green[t2p2]=244; t2blue[t2p2]=54;
+      }
+      t2x=7;
+      t2y=14;
+      while(t2sn2<t2sn3 && t2symbolcursor==1){
+      t2symbol=t2symbola[t2sn2];
+      if(t2sn2==0){
+      t2textheightequal3=t2textheight;
+      }
+      if(t2sn2==(t2textheight2-t2textheightequal2)*74){
+      t2y=t2y+9;
+      t2x=7;
+      t2textheight2=t2textheight2+2;
+      t2textheightequal=1;
+      }
+      if(t2textheightequal2-1<t2textheight-t2textheightequal3 && t2textheightequal==1){
+      t2textheightequal2=t2textheightequal2+1;
+      t2textheightequal3=t2textheightequal3-1;
+      }
+      if(t2x==7 && t2textheightequal2>0){
+      t2textheightequal=0;
+      }
+      t2x=t2x+4;
+      if(t2symbol==1){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==2){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==3){
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==4){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==5){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==6){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==7){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==8){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==9){
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==10){
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==11){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==12){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==13){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==14){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==15){
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==16){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==17){
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==18){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==19){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*320)+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==20){
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==21){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==22){
+      t2p2=((t2y-1)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==23){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==24){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==25){
+      t2p2=((t2y-3)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*(320))+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*(320))+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==26){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*320)+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-4)*320)+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-3)*320)+t2x+2;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-2)*320)+t2x+1;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*(320))+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==30){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      }
+      if(t2symbol==31){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      }
+      if(t2symbol==32){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      }
+      if(t2symbol==33){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      }
+      if(t2symbol==34){
+      t2p2=((t2y-1)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      }
+      if(t2symbol==35){
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      }
+      if(t2symbol==36){
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      }
+      if(t2symbol==37){
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      }
+      if(t2symbol==38){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      }
+      if(t2symbol==39){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-2)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-4)*320)+t2x+1;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-3)*320)+t2x;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      t2p2=((t2y-1)*320)+t2x+2;
+      t2red[t2p2]=249; t2green[t2p2]=26; t2blue[t2p2]=26;
+      }
+      if(t2symbol==40){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=((t2y-1)*320)+t2x;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=((t2y-2)*320)+t2x;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=((t2y-3)*320)+t2x;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=((t2y-4)*320)+t2x;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=(t2y*320)+t2x+1;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=((t2y-1)*320)+t2x+1;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=((t2y-2)*320)+t2x+1;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=((t2y-3)*320)+t2x+1;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=((t2y-4)*320)+t2x+1;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=(t2y*320)+t2x+2;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=((t2y-1)*320)+t2x+2;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=((t2y-2)*320)+t2x+2;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=((t2y-3)*320)+t2x+2;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=((t2y-4)*320)+t2x+2;
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      }
+      if(t2symbol==27){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      t2p2=((t2y-1)*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==28){
+      t2p2=(t2y*320)+t2x;
+      t2red[t2p2]=0; t2green[t2p2]=0; t2blue[t2p2]=0;
+      }
+      if(t2symbol==29){
+      t2p2=t2x;
+      t2p2=t2x+1;
+      t2p2=t2x+2;
+      }
+      t2sn2=t2sn2+1;
+      }
+      if(t2symbolcursor==1){
+      while(t2passa2<t2sn3){
+      t2identifysymbol=t2symbola[t2passa2];
+      if(t2identifysymbol==1){t2identifysymbol2="a";}
+      if(t2identifysymbol==2){t2identifysymbol2="b";}
+      if(t2identifysymbol==3){t2identifysymbol2="c";}
+      if(t2identifysymbol==4){t2identifysymbol2="d";}
+      if(t2identifysymbol==5){t2identifysymbol2="e";}
+      if(t2identifysymbol==6){t2identifysymbol2="f";}
+      if(t2identifysymbol==7){t2identifysymbol2="g";}
+      if(t2identifysymbol==8){t2identifysymbol2="h";}
+      if(t2identifysymbol==9){t2identifysymbol2="i";}
+      if(t2identifysymbol==10){t2identifysymbol2="j";}
+      if(t2identifysymbol==11){t2identifysymbol2="k";}
+      if(t2identifysymbol==12){t2identifysymbol2="l";}
+      if(t2identifysymbol==13){t2identifysymbol2="m";}
+      if(t2identifysymbol==14){t2identifysymbol2="n";}
+      if(t2identifysymbol==15){t2identifysymbol2="o";}
+      if(t2identifysymbol==16){t2identifysymbol2="p";}
+      if(t2identifysymbol==17){t2identifysymbol2="q";}
+      if(t2identifysymbol==18){t2identifysymbol2="r";}
+      if(t2identifysymbol==19){t2identifysymbol2="s";}
+      if(t2identifysymbol==20){t2identifysymbol2="t";}
+      if(t2identifysymbol==21){t2identifysymbol2="u";}
+      if(t2identifysymbol==22){t2identifysymbol2="v";}
+      if(t2identifysymbol==23){t2identifysymbol2="w";}
+      if(t2identifysymbol==24){t2identifysymbol2="x";}
+      if(t2identifysymbol==25){t2identifysymbol2="y";}
+      if(t2identifysymbol==26){t2identifysymbol2="z";}
+      if(t2identifysymbol==27){t2identifysymbol2=",";}
+      if(t2identifysymbol==28){t2identifysymbol2=".";}
+      if(t2identifysymbol==29){t2identifysymbol2=" ";}
+      if(t2identifysymbol==30){t2identifysymbol2="0";}
+      if(t2identifysymbol==31){t2identifysymbol2="1";}
+      if(t2identifysymbol==32){t2identifysymbol2="2";}
+      if(t2identifysymbol==33){t2identifysymbol2="3";}
+      if(t2identifysymbol==34){t2identifysymbol2="4";}
+      if(t2identifysymbol==35){t2identifysymbol2="5";}
+      if(t2identifysymbol==36){t2identifysymbol2="6";}
+      if(t2identifysymbol==37){t2identifysymbol2="7";}
+      if(t2identifysymbol==38){t2identifysymbol2="8";}
+      if(t2identifysymbol==39){t2identifysymbol2="9";}
+      if(t2identifysymbol==40){t2identifysymbol2="Backspace";}
+      t2jdataa2[t2passa2]=t2identifysymbol2;
+      t2passa2=t2passa2+1;
+      }
+      }
+//run without save
+ if(key3=="'"){
+if(t2aa>0){
+t2data2=[];
+t2data2=t2syssa;
+//t2data2=t2syssa.join('');
+}
+if(t2aa==0){
+t2data2=[];
+t2data2=t2symbola;
+}
+t2run=2;
+      t2d22=0;
+      t2symbolcursor=2;
+      key3="aammm";
+}
+//run without save end
+//load
+/*
+if(key3=="["){ 
+t2symbola=t2data2;
+//t2symbola2=t2symbola;
+key3="aaaaahh";
+}
+*/
+//load end
+//save all
+if(key3=="]" && t2aa>0){ 
+t2output=t2syssa;
+//t2output=t2syssa.join('');
+textToSave ="let t2data2=["+t2output+"];";
+      fileName = 'data.js';
+      blob = new Blob([textToSave], { type: 'text/plain' });
+      url = URL.createObjectURL(blob);
+      a = document.createElement('a');
+      a.href = url;
+      a.download = fileName;
+      a.click();
+      URL.revokeObjectURL(url);
+      key3="aaaaahh";
+}
+//save all end
+      if(key3=="Shift" && t2symbolcursor==1){
+      t2symbolcursor=20; //t2p2=t2p2+(7+(74*4))*8;
+      if(t2aa>t2aa2){t2aa2=t2aa; t2symbola=[29]; t2symbolcursor=38;}
+      t2textheightcopy=0; t2textheight2copy=0; t2sn4=0; if(t2aa<=t2aa2 && t2symbolcursor==20){t2syssa[t2aa]=t2symbola;
+      t2aa=t2aa+1; t2aa2=t2aa; t2symbolcursor=20;}
+      key3="aah";
+      }
+      if(key3==";" && t2symbolcursor==1){
+      t2symbolcursor=32;
+      //t2p2=0;
+      //t2sn4=(7+(74*4))*8;
+      t2textheightcopy=0; t2textheight2copy=0; t2sn4=0;
+      key3="aah";
+      }
+      if(key3=="Enter" && t2spacekey2==0){ 
+      t2spacekey2=1;
+      key3="aahhhhhh";
+      }
+      if(t2x<=12 && t2spacekey2==1){
+      t2spacekey2=0;
+      key3="Backspace";
+      }
+      if(t2x>=7 && t2spacekey2==1){
+      key3=" ";
+      }
+      if(key3=="/"){ 
+      if(t2symbolcursor==20 && t2aa<=t2aa2){
+      t2symbola=[29]; t2symbola2=[29];
+      }
+      if(t2symbolcursor==32){
+      if(t2aa2>0){t2aa2=t2aa2-1;
+      t2symbola=t2syssa[t2aa2]; t2symbola2=t2syssa[t2aa2];}
+      }
+      t2symbolcursor=1;
+      if(t2run2==2){
+      t2symbola=t2symbola2;
+      t2sn3=t2sn4;
+      t2textheight=t2textheightcopy;
+      t2textheight2=t2textheight2copy;
+      }
+      t2run2=0;
+      key3="aah";
+      }
+      //input key
+      if(t2symbolcursor==1){
+      if(key3=="a"){ 
+      t2symbol=1;
+      key3="aa";
+      }
+      if(key3=="b"){ 
+      t2symbol=2;
+      key3="aa";
+      }
+      if(key3=="c"){ 
+      t2symbol=3;
+      key3="aa";
+      }
+      if(key3=="d"){ 
+      t2symbol=4;
+      key3="aa";
+      }
+      if(key3=="e"){ 
+      t2symbol=5;
+      key3="aa";
+      }
+      if(key3=="f"){ 
+      t2symbol=6;
+      key3="aa";
+      }
+      if(key3=="g"){ 
+      t2symbol=7;
+      key3="aa";
+      }
+      if(key3=="h"){ 
+      t2symbol=8;
+      key3="aa";
+      }
+      if(key3=="i"){ 
+      t2symbol=9;
+      key3="aa";
+      }
+      if(key3=="j"){ 
+      t2symbol=10;
+      key3="aa";
+      }
+      if(key3=="k"){ 
+      t2symbol=11;
+      key3="aa";
+      }
+      if(key3=="l"){ 
+      t2symbol=12;
+      key3="aa";
+      }
+      if(key3=="m"){ 
+      t2symbol=13;
+      key3="aa";
+      }
+      if(key3=="n"){ 
+      t2symbol=14;
+      key3="aa";
+      }
+      if(key3=="o"){ 
+      t2symbol=15;
+      key3="aa";
+      }
+      if(key3=="p"){ 
+      t2symbol=16;
+      key3="aa";
+      }
+      if(key3=="q"){ 
+      t2symbol=17;
+      key3="aa";
+      }
+      if(key3=="r"){ 
+      t2symbol=18;
+      key3="aa";
+      }
+      if(key3=="s"){ 
+      t2symbol=19;
+      key3="aa";
+      }
+      if(key3=="t"){ 
+      t2symbol=20;
+      key3="aa";
+      }
+      if(key3=="u"){ 
+      t2symbol=21;
+      key3="aa";
+      }
+      if(key3=="v"){ 
+      t2symbol=22;
+      key3="aa";
+      }
+      if(key3=="w"){ 
+      t2symbol=23;
+      key3="aa";
+      }
+      if(key3=="x"){ 
+      t2symbol=24;
+      key3="aa";
+      }
+      if(key3=="y"){ 
+      t2symbol=25;
+      key3="aa";
+      }
+      if(key3=="z"){ 
+      t2symbol=26;
+      key3="aa";
+      }
+      if(key3=="0"){ 
+      t2symbol=30;
+      key3="aa";
+      }
+      if(key3=="1"){ 
+      t2symbol=31;
+      key3="aa";
+      }
+      if(key3=="2"){ 
+      t2symbol=32;
+      key3="aa";
+      }
+      if(key3=="3"){ 
+      t2symbol=33;
+      key3="aa";
+      }
+      if(key3=="4"){ 
+      t2symbol=34;
+      key3="aa";
+      }
+      if(key3=="5"){ 
+      t2symbol=35;
+      key3="aa";
+      }
+      if(key3=="6"){ 
+      t2symbol=36;
+      key3="aa";
+      }
+      if(key3=="7"){ 
+      t2symbol=37;
+      key3="aa";
+      }
+      if(key3=="8"){ 
+      t2symbol=38;
+      key3="aa";
+      }
+      if(key3=="9"){ 
+      t2symbol=39;
+      key3="aa";
+      }
+      if(key3==","){ 
+      t2symbol=27;
+      key3="aa";
+      }
+      if(key3=="."){ 
+      t2symbol=28;
+      key3="aa";
+      }
+      if(key3==" "){ 
+      t2symbol=29;
+      key3="aa";
+      }
+      if(key3=="`"){ 
+      t2writesaved=1;
+      key3="aammm";
+      }
+      if(key3=="-"){ 
+      t2run=1;
+      t2run2=1;
+      t2symbolcursor=1;
+      key3="aammm";
+      }
+      if(key3=="="){ 
+      t2run=2;
+      t2d22=0;
+      t2symbolcursor=2;
+      key3="aammm";
+      }
+      if(key3=="Backspace" && t2sn>0 && t2x2>8){ 
+      t2symbol=40;
+      if(t2x2<t2x){
+      t2x2=t2x2-4;
+      t2sn=t2sn-1;
+      }
+      if(t2x2>t2x-1){
+      t2x2=t2x2-4;
+      t2sn=t2sn-1;
+      t2sn3=t2sn3-1;
+      }
+      key3="aa";
+      }
+      if(key3=="aa"){
+      t2run=0;
+      t2symbola[t2sn+t2counta]=t2symbol;
+      if(t2symbol!=40){
+      t2sn=t2sn+1;
+      t2x2=t2x2+4;
+      }
+      if(t2x2>t2x && t2y2==t2y && t2symbol!=40){
+      t2sn3=t2sn3+1;
+      }
+      if(t2sn3>(t2textheight+1)*74 && t2x2>=7+(74*4) && t2controlmove==0 && t2y2<167){
+      t2y2=t2y2+9;
+      t2x2=7+4;
+      t2textheight=t2textheight+1;
+      t2controlmove=0;
+      }
+      if(t2sn3<=((t2textheight)*74) && t2x2<9 && t2controlmove==0 && t2y2!=14){
+      t2y2=t2y2-9;
+      t2x2=7+(74*4);
+      t2textheight=t2textheight-1;
+      t2textheight2=t2textheight2-2;
+      t2controlmove=0;
+      }
+      if(t2y2>=167 && t2x2>t2x && t2y2==t2y && t2x2>7+(4*70)){
+      t2symbola[t2sn-1+t2counta]=29;
+      t2y2=t2y2;
+      t2x2=t2x2-8;
+      t2sn=t2sn-2;
+      t2sn3=t2sn3-1;
+      }
+      key3="aah";
+      }
+      }
+      //text identifier
+      if(t2symbolcursor==1){
+      if(key2=="ArrowUp" && t2y2>15){ 
+      t2y2=t2y2-9;
+      t2sn=t2sn-74;
+      key2="aahh";
+      }
+      if(key2=="ArrowDown" && t2y2<167 && t2y2<t2y){ 
+      if(t2y2<t2y-9 && t2movedown==0){
+      t2y2=t2y2+9;
+      t2sn=t2sn+74;
+      t2movedown=1;
+      }
+      if(t2y2<t2y && t2x2<t2x+4 && t2movedown==0){
+      t2y2=t2y2+9;
+      t2sn=t2sn+74;
+      t2movedown=1;
+      }
+      t2movedown=0;
+      key2="aahh";
+      }
+      if(key2=="ArrowLeft" && t2x2>8){ 
+      t2sn=t2sn-1;
+      t2x2=t2x2-4;
+      key2="aahh";
+      }
+      if(key2=="ArrowRight" && t2x2<303){ 
+      if(t2y2==t2y && t2x2<=t2x-4){
+      t2sn=t2sn+1;
+      t2x2=t2x2+4;
+      }
+      if(t2y2<t2y){
+      t2x2=t2x2+4;
+      t2sn=t2sn+1;
+      }
+      key2="aahh";
+      }
+      }
+      if(t2symbolcursor==1 && key2=="aahh"){
+      t2backspace=1;
+      key2="aahhh";
+      }
+      if(t2symbolcursor==2 && key2=="z"){
+      t2keyg=26;
+      }
+      if(t2symbolcursor==2 && key2=="x"){
+      t2keyg=24;
+      }
+      if(t2symbolcursor==2 && key2=="ArrowUp"){
+      t2keyg=31;
+      }
+      if(t2symbolcursor==2 && key2=="ArrowDown"){
+      t2keyg=32;
+      }
+      if(t2symbolcursor==2 && key2=="ArrowRight"){
+      t2keyg=33;
+      }
+      if(t2symbolcursor==2 && key2=="ArrowLeft"){
+      t2keyg=34;
+      }
+      //save sheet
+      if(t2symbolcursor==1 && t2run==1){
+      t2pass2=0;
+      while(t2pass2<t2sn3){
+      if(t2symbola[t2pass2]==13 && t2symbola[t2pass2+1]==15 && t2symbola[t2pass2+2]==4 && t2symbola[t2pass2+3]==5 && t2symbola[t2pass2+5]==19 && t2symbola[t2pass2+6]==1 && t2symbola[t2pass2+7]==22 && t2symbola[t2pass2+8]==5){
+      t2pass3=0;
+      while(t2pass3<t2sn3-9){
+      t2jdata[t2pass3]=t2symbola[t2pass3];
+      t2pass3=t2pass3+1;
+      }
+      t2run=0;
+      t2pass2=t2sn3;
+      }
+      t2pass2=t2pass2+1;
+      }
+      }
+      if(t2writesaved==1){
+      //document.getElementById("osdata").innerHTML=t2jdata;
+      textToSave ="let t2data2=["+t2jdata+"];";
+      fileName = 'data.js';
+      blob = new Blob([textToSave], { type: 'text/plain' });
+      url = URL.createObjectURL(blob);
+      a = document.createElement('a');
+      a.href = url;
+      a.download = fileName;
+      a.click();
+      URL.revokeObjectURL(url);
+      t2writesaved=0;
+      }
+      //code to run all sheets
+      if(t2run==2 && t2symbolcursor==2){
+      t2result=0; t2result2=0;
+      while(t2pass12<t2data2.length){
+      if(t2num==10){t2num=0;} 
+      if(t2num2==10){t2num2=0;} 
+      if(t2num3==10){t2num3=0;} 
+      if(t2num4==10){t2num4=0;} 
+      if(t2num5==10){t2num5=0;}
+      if(t23num==10){t23num=0;}
+      if(t23num2==10){t23num2=0;} 
+      if(t23num3==10){t23num3=0;} 
+      if(t23num4==10){t23num4=0;} 
+      if(t23num5==10){t23num5=0;}
+      if(t2result==0){
+      t23num5=0; t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0; t23num4=0; t23num3=0; t23num2=0; t23num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+7]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+6]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+5]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+4]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+3]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      while(t23num5<10 && t2numnew==5 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+14]==t23num5+30){
+      t2numnew=6;
+      t23num5=t23num5-1;
+      }
+      t23num5=t23num5+1;
+      }
+      while(t23num4<10 && t2numnew==6 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+13]==t23num4+30){
+      t2numnew=7;
+      t23num4=t23num4-1;
+      }
+      t23num4=t23num4+1;
+      }
+      while(t23num3<10 && t2numnew==7 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+12]==t23num3+30){
+      t2numnew=8;
+      t23num3=t23num3-1;
+      }
+      t23num3=t23num3+1;
+      }
+      while(t23num2<10 && t2numnew==8 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+11]==t23num2+30){
+      t2numnew=9;
+      t23num2=t23num2-1;
+      }
+      t23num2=t23num2+1;
+      }
+      while(t23num<10 && t2numnew==9 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+10]==t23num+30){
+      t2numnew=10;
+      t23num=t23num-1;
+      }
+      t23num=t23num+1;
+      }
+      if(globalvar==0 && t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+3]==t2num+30 && t2data2[t2pass12+4]==t2num2+30 && t2data2[t2pass12+5]==t2num3+30 && t2data2[t2pass12+6]==t2num4+30 && t2data2[t2pass12+7]==t2num5+30 && t2data2[t2pass12+8]==9 && t2data2[t2pass12+9]==19 && t2data2[t2pass12+10]==t23num+30 && t2data2[t2pass12+11]==t23num2+30 && t2data2[t2pass12+12]==t23num3+30 && t2data2[t2pass12+13]==t23num4+30 && t2data2[t2pass12+14]==t23num5+30 && t2numnew==10){
+      t2vara[t2variable]=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2varavalue[t2variable]=(t23num*10000)+(t23num2*1000)+(t23num3*100)+(t23num4*10)+(t23num5);
+      t2variable=t2variable+1;
+      //14 because it will increase ny 1 at the end
+      t2pass12=t2pass12+14;
+      t2numnew=0; 
+      }
+      t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==9 && t2data2[t2pass12+1]==6 && t2data2[t2pass12+6]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==9 && t2data2[t2pass12+1]==6 && t2data2[t2pass12+5]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==9 && t2data2[t2pass12+1]==6 && t2data2[t2pass12+4]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==9 && t2data2[t2pass12+1]==6 && t2data2[t2pass12+2]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==9 && t2data2[t2pass12+1]==6 && t2data2[t2pass12+2]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      if(t2numnew==5 && t2result3==0 && t2data2[t2pass12]==9 && t2data2[t2pass12+1]==6 && t2data2[t2pass12+2]==t2num+30 && t2data2[t2pass12+3]==t2num2+30 && t2data2[t2pass12+4]==t2num3+30 && t2data2[t2pass12+5]==t2num4+30 && t2data2[t2pass12+6]==t2num5+30){
+      t2var2=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2numnew=0; t2num5=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      t2pass12=t2pass12+6;
+      t2result3=1;
+      }
+      if(t2numnew==5 && t2result3==2 && t2data2[t2pass12]==9 && t2data2[t2pass12+1]==6 && t2data2[t2pass12+2]==t2num+30 && t2data2[t2pass12+3]==t2num2+30 && t2data2[t2pass12+4]==t2num3+30 && t2data2[t2pass12+5]==t2num4+30 && t2data2[t2pass12+6]==t2num5+30){
+      t2var3=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2numnew=0; t2num5=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      t2pass12=t2pass12+6;
+      t2result3=3;
+      }
+      if(t2data2[t2pass12]==7 && t2data2[t2pass12+1]==18 && t2data2[t2pass12+2]==5 && t2data2[t2pass12+3]==1 && t2data2[t2pass12+4]==20 && t2data2[t2pass12+5]==5 && t2data2[t2pass12+6]==18 && t2result3==3){
+      t2variablecount=0;
+      t2pass12=t2pass12+6;
+      t2result3=4;
+      }
+      if(t2data2[t2pass12]==12 && t2data2[t2pass12+1]==5 && t2data2[t2pass12+2]==19 && t2data2[t2pass12+3]==19 && t2result3==3){
+      t2variablecount=0;
+      t2pass12=t2pass12+3;
+      t2result3=5;
+      }
+      if(t2data2[t2pass12]==5 && t2data2[t2pass12+1]==17 && t2data2[t2pass12+2]==21 && t2data2[t2pass12+3]==1 && t2data2[t2pass12+4]==12 && t2result3==3){
+      t2variablecount=0;
+      t2pass12=t2pass12+4;
+      t2result3=6;
+      }
+      //4 for greater 5 for less 6 for equal
+      while(t2variablecount<t2variable && t2result3==4){
+      if(t2var2==t2vara[t2variablecount]){
+      t2var4=t2varavalue[t2variablecount];
+      }
+      if(t2var3==t2vara[t2variablecount]){
+      t2var5=t2varavalue[t2variablecount];
+      }
+      if(t2var4>t2var5){
+      t2result2=1;
+      t2result=1;
+      t2numnew=0; t2num5=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      while(t2variablecount<t2variable && t2result3==5){
+      if(t2var2==t2vara[t2variablecount]){
+      t2var4=t2varavalue[t2variablecount];
+      }
+      if(t2var3==t2vara[t2variablecount]){
+      t2var5=t2varavalue[t2variablecount];
+      }
+      if(t2var4<t2var5){
+      t2result2=1;
+      t2result=1;
+      t2numnew=0; t2num5=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      while(t2variablecount<t2variable && t2result3==6){
+      if(t2var2==t2vara[t2variablecount]){
+      t2var4=t2varavalue[t2variablecount];
+      t2vare4=1;
+      }
+      if(t2var3==t2vara[t2variablecount]){
+      t2var5=t2varavalue[t2variablecount];
+      t2vare5=1;
+      }
+      if(t2var4==t2var5 && t2vare4==1 && t2vare5==1){
+      t2result2=1;
+      t2result=1;
+      t2numnew=0; t2num5=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      t2vare4=0;
+      t2vare5=0;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      }
+      if(t2result==1){
+      t23num5=0; t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0; t23num4=0; t23num3=0; t23num2=0; t23num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+7]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+6]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+5]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+4]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+3]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      while(t23num5<10 && t2numnew==5 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+14]==t23num5+30){
+      t2numnew=6;
+      t23num5=t23num5-1;
+      }
+      t23num5=t23num5+1;
+      }
+      while(t23num4<10 && t2numnew==6 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+13]==t23num4+30){
+      t2numnew=7;
+      t23num4=t23num4-1;
+      }
+      t23num4=t23num4+1;
+      }
+      while(t23num3<10 && t2numnew==7 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+12]==t23num3+30){
+      t2numnew=8;
+      t23num3=t23num3-1;
+      }
+      t23num3=t23num3+1;
+      }
+      while(t23num2<10 && t2numnew==8 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+11]==t23num2+30){
+      t2numnew=9;
+      t23num2=t23num2-1;
+      }
+      t23num2=t23num2+1;
+      }
+      while(t23num<10 && t2numnew==9 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+10]==t23num+30){
+      t2numnew=10;
+      t23num=t23num-1;
+      }
+      t23num=t23num+1;
+      }
+      if(t2data2[t2pass12]==22 && t2data2[t2pass12+1]==1 && t2data2[t2pass12+2]==18 && t2data2[t2pass12+3]==t2num+30 && t2data2[t2pass12+4]==t2num2+30 && t2data2[t2pass12+5]==t2num3+30 && t2data2[t2pass12+6]==t2num4+30 && t2data2[t2pass12+7]==t2num5+30 && t2data2[t2pass12+8]==9 && t2data2[t2pass12+9]==19 && t2data2[t2pass12+10]==t23num+30 && t2data2[t2pass12+11]==t23num2+30 && t2data2[t2pass12+12]==t23num3+30 && t2data2[t2pass12+13]==t23num4+30 && t2data2[t2pass12+14]==t23num5+30 && t2numnew==10){
+      t2vara[t2variable]=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2varavalue[t2variable]=(t23num*10000)+(t23num2*1000)+(t23num3*100)+(t23num4*10)+(t23num5);
+      t2variable=t2variable+1;
+      //14 because it will increase ny 1 at the end
+      t2pass12=t2pass12+14;
+      t2numnew=0;
+      }
+      t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==24 && t2data2[t2pass12+5]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==24 && t2data2[t2pass12+4]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==24 && t2data2[t2pass12+3]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==24 && t2data2[t2pass12+2]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==24 && t2data2[t2pass12+1]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      if(t2data2[t2pass12]==24 && t2xnew==0 && t2data2[t2pass12+1]==t2num+30 && t2data2[t2pass12+2]==t2num2+30 && t2data2[t2pass12+3]==t2num3+30 && t2data2[t2pass12+4]==t2num4+30 && t2data2[t2pass12+5]==t2num5+30){
+      t2variablecount=0;
+      t2vx[t2acoordinatex]=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      t2acoordinatex=t2acoordinatex+1;
+      t2pass12=t2pass12+5;
+      t2xnew=1;
+      }
+      t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==25 && t2data2[t2pass12+5]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==25 && t2data2[t2pass12+4]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==25 && t2data2[t2pass12+3]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==25 && t2data2[t2pass12+2]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==25 && t2data2[t2pass12+1]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      if(t2data2[t2pass12]==25 && t2ynew==0 && t2data2[t2pass12+1]==t2num+30 && t2data2[t2pass12+2]==t2num2+30 && t2data2[t2pass12+3]==t2num3+30 && t2data2[t2pass12+4]==t2num4+30 && t2data2[t2pass12+5]==t2num5+30){
+      t2vy[t2acoordinatey]=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2variablecount=0;
+      t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      t2acoordinatey=t2acoordinatey+1;
+      t2pass12=t2pass12+5;
+      t2ynew=1;
+      }
+      while(t2variablecount<t2variable && t2xnew==1){
+      if(t2vx[t2acoordinatex-1]==t2vara[t2variablecount]){
+      t2vx2[t2acoordinatex-1]=t2varavalue[t2variablecount];
+      t2xnew=0;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      while(t2variablecount<t2variable && t2ynew==1){
+      if(t2vy[t2acoordinatey-1]==t2vara[t2variablecount]){
+      t2vy2[t2acoordinatey-1]=t2varavalue[t2variablecount];
+      t2ynew=0;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==18 && t2data2[t2pass12+5]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==18 && t2data2[t2pass12+4]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==18 && t2data2[t2pass12+3]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==18 && t2data2[t2pass12+2]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==18 && t2data2[t2pass12+1]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      if(t2data2[t2pass12]==18 && t2rnew==0 && t2data2[t2pass12+1]==t2num+30 && t2data2[t2pass12+2]==t2num2+30 && t2data2[t2pass12+3]==t2num3+30 && t2data2[t2pass12+4]==t2num4+30 && t2data2[t2pass12+5]==t2num5+30){
+      t2vr[t2acoordinater]=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2variablecount=0;
+      t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      t2acoordinater=t2acoordinater+1;
+      t2pass12=t2pass12+5;
+      t2rnew=1;
+      }
+      t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==7 && t2data2[t2pass12+5]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==7 && t2data2[t2pass12+4]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==7 && t2data2[t2pass12+3]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==7 && t2data2[t2pass12+2]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==7 && t2data2[t2pass12+1]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      if(t2data2[t2pass12]==7 && t2gnew==0 && t2data2[t2pass12+1]==t2num+30 && t2data2[t2pass12+2]==t2num2+30 && t2data2[t2pass12+3]==t2num3+30 && t2data2[t2pass12+4]==t2num4+30 && t2data2[t2pass12+5]==t2num5+30){
+      t2vg[t2acoordinateg]=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2variablecount=0;
+      t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      t2acoordinateg=t2acoordinateg+1;
+      t2pass12=t2pass12+5;
+      t2gnew=1;
+      }
+      t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==2 && t2data2[t2pass12+5]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==2 && t2data2[t2pass12+4]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==2 && t2data2[t2pass12+3]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==2 && t2data2[t2pass12+2]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==2 && t2data2[t2pass12+1]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      if(t2data2[t2pass12]==2 && t2bnew==0 && t2data2[t2pass12+1]==t2num+30 && t2data2[t2pass12+2]==t2num2+30 && t2data2[t2pass12+3]==t2num3+30 && t2data2[t2pass12+4]==t2num4+30 && t2data2[t2pass12+5]==t2num5+30){
+      t2vb[t2acoordinateb]=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2variablecount=0;
+      t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0;
+      t2acoordinateb=t2acoordinateb+1;
+      t2pass12=t2pass12+5;
+      t2bnew=1;
+      }
+      while(t2variablecount<t2variable && t2rnew==1){
+      if(t2vr[t2acoordinater-1]==t2vara[t2variablecount]){
+      t2vr2[t2acoordinater-1]=t2varavalue[t2variablecount];
+      t2rnew=0;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      while(t2variablecount<t2variable && t2gnew==1){
+      if(t2vg[t2acoordinateg-1]==t2vara[t2variablecount]){
+      t2vg2[t2acoordinateg-1]=t2varavalue[t2variablecount];
+      t2gnew=0;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      while(t2variablecount<t2variable && t2bnew==1){
+      if(t2vb[t2acoordinateb-1]==t2vara[t2variablecount]){
+      t2vb2[t2acoordinateb-1]=t2varavalue[t2variablecount];
+      t2bnew=0;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      //add
+      t23num5=0; t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0; t23num4=0; t23num3=0; t23num2=0; t23num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==1 && t2data2[t2pass12+1]==4 && t2data2[t2pass12+2]==4 && t2data2[t2pass12+7]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==1 && t2data2[t2pass12+1]==4 && t2data2[t2pass12+2]==4 && t2data2[t2pass12+6]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==1 && t2data2[t2pass12+1]==4 && t2data2[t2pass12+2]==4 && t2data2[t2pass12+5]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==1 && t2data2[t2pass12+1]==4 && t2data2[t2pass12+2]==4 && t2data2[t2pass12+4]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==1 && t2data2[t2pass12+1]==4 && t2data2[t2pass12+2]==4 && t2data2[t2pass12+3]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      while(t23num5<10 && t2numnew==5 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==1 && t2data2[t2pass12+1]==4 && t2data2[t2pass12+2]==4 && t2data2[t2pass12+14]==t23num5+30){
+      t2numnew=6;
+      t23num5=t23num5-1;
+      }
+      t23num5=t23num5+1;
+      }
+      while(t23num4<10 && t2numnew==6 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==1 && t2data2[t2pass12+1]==4 && t2data2[t2pass12+2]==4 && t2data2[t2pass12+13]==t23num4+30){
+      t2numnew=7;
+      t23num4=t23num4-1;
+      }
+      t23num4=t23num4+1;
+      }
+      while(t23num3<10 && t2numnew==7 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==1 && t2data2[t2pass12+1]==4 && t2data2[t2pass12+2]==4 && t2data2[t2pass12+12]==t23num3+30){
+      t2numnew=8;
+      t23num3=t23num3-1;
+      }
+      t23num3=t23num3+1;
+      }
+      while(t23num2<10 && t2numnew==8 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==1 && t2data2[t2pass12+1]==4 && t2data2[t2pass12+2]==4 && t2data2[t2pass12+11]==t23num2+30){
+      t2numnew=9;
+      t23num2=t23num2-1;
+      }
+      t23num2=t23num2+1;
+      }
+      while(t23num<10 && t2numnew==9 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==1 && t2data2[t2pass12+1]==4 && t2data2[t2pass12+2]==4 && t2data2[t2pass12+10]==t23num+30){
+      t2numnew=10;
+      t23num=t23num-1;
+      }
+      t23num=t23num+1;
+      }
+      if(t2data2[t2pass12]==1 && t2data2[t2pass12+1]==4 && t2data2[t2pass12+2]==4 && t2data2[t2pass12+3]==t2num+30 && t2data2[t2pass12+4]==t2num2+30 && t2data2[t2pass12+5]==t2num3+30 && t2data2[t2pass12+6]==t2num4+30 && t2data2[t2pass12+7]==t2num5+30 && t2data2[t2pass12+8]==20 && t2data2[t2pass12+9]==15 && t2data2[t2pass12+10]==t23num+30 && t2data2[t2pass12+11]==t23num2+30 && t2data2[t2pass12+12]==t23num3+30 && t2data2[t2pass12+13]==t23num4+30 && t2data2[t2pass12+14]==t23num5+30 && t2numnew==10){
+      t2vap2=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2vap3=(t23num*10000)+(t23num2*1000)+(t23num3*100)+(t23num4*10)+(t23num5);
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap2==t2vara[t2variablecount]){
+      t2vap22=t2varavalue[t2variablecount];
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap3==t2vara[t2variablecount]){
+      t2vap33=t2varavalue[t2variablecount];
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      t2vap33=t2vap33+t2vap22;
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap3==t2vara[t2variablecount]){
+      t2varavalue[t2variablecount]=t2vap33;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      //14 because it will increase ny 1 at the end
+      t2pass12=t2pass12+14;
+      t2numnew=0;
+      }
+      //sub
+      t23num5=0; t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0; t23num4=0; t23num3=0; t23num2=0; t23num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==19 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==2 && t2data2[t2pass12+7]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==19 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==2 && t2data2[t2pass12+6]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==19 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==2 && t2data2[t2pass12+5]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==19 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==2 && t2data2[t2pass12+4]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==19 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==2 && t2data2[t2pass12+3]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      while(t23num5<10 && t2numnew==5 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==19 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==2 && t2data2[t2pass12+14]==t23num5+30){
+      t2numnew=6;
+      t23num5=t23num5-1;
+      }
+      t23num5=t23num5+1;
+      }
+      while(t23num4<10 && t2numnew==6 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==19 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==2 && t2data2[t2pass12+13]==t23num4+30){
+      t2numnew=7;
+      t23num4=t23num4-1;
+      }
+      t23num4=t23num4+1;
+      }
+      while(t23num3<10 && t2numnew==7 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==19 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==2 && t2data2[t2pass12+12]==t23num3+30){
+      t2numnew=8;
+      t23num3=t23num3-1;
+      }
+      t23num3=t23num3+1;
+      }
+      while(t23num2<10 && t2numnew==8 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==19 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==2 && t2data2[t2pass12+11]==t23num2+30){
+      t2numnew=9;
+      t23num2=t23num2-1;
+      }
+      t23num2=t23num2+1;
+      }
+      while(t23num<10 && t2numnew==9 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==19 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==2 && t2data2[t2pass12+10]==t23num+30){
+      t2numnew=10;
+      t23num=t23num-1;
+      }
+      t23num=t23num+1;
+      }
+      if(t2data2[t2pass12]==19 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==2 && t2data2[t2pass12+3]==t2num+30 && t2data2[t2pass12+4]==t2num2+30 && t2data2[t2pass12+5]==t2num3+30 && t2data2[t2pass12+6]==t2num4+30 && t2data2[t2pass12+7]==t2num5+30 && t2data2[t2pass12+8]==20 && t2data2[t2pass12+9]==15 && t2data2[t2pass12+10]==t23num+30 && t2data2[t2pass12+11]==t23num2+30 && t2data2[t2pass12+12]==t23num3+30 && t2data2[t2pass12+13]==t23num4+30 && t2data2[t2pass12+14]==t23num5+30 && t2numnew==10){
+      t2vap2=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2vap3=(t23num*10000)+(t23num2*1000)+(t23num3*100)+(t23num4*10)+(t23num5);
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap2==t2vara[t2variablecount]){
+      t2vap22=t2varavalue[t2variablecount];
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap3==t2vara[t2variablecount]){
+      t2vap33=t2varavalue[t2variablecount];
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      t2vap33=t2vap33-t2vap22;
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap3==t2vara[t2variablecount]){
+      t2varavalue[t2variablecount]=t2vap33;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      //14 because it will increase ny 1 at the end
+      t2pass12=t2pass12+14;
+      t2numnew=0;
+      }
+      //mul
+      t23num5=0; t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0; t23num4=0; t23num3=0; t23num2=0; t23num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==13 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==12 && t2data2[t2pass12+7]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==13 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==12 && t2data2[t2pass12+6]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==13 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==12 && t2data2[t2pass12+5]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==13 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==12 && t2data2[t2pass12+4]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==13 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==12 && t2data2[t2pass12+3]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      while(t23num5<10 && t2numnew==5 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==13 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==12 && t2data2[t2pass12+14]==t23num5+30){
+      t2numnew=6;
+      t23num5=t23num5-1;
+      }
+      t23num5=t23num5+1;
+      }
+      while(t23num4<10 && t2numnew==6 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==13 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==12 && t2data2[t2pass12+13]==t23num4+30){
+      t2numnew=7;
+      t23num4=t23num4-1;
+      }
+      t23num4=t23num4+1;
+      }
+      while(t23num3<10 && t2numnew==7 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==13 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==12 && t2data2[t2pass12+12]==t23num3+30){
+      t2numnew=8;
+      t23num3=t23num3-1;
+      }
+      t23num3=t23num3+1;
+      }
+      while(t23num2<10 && t2numnew==8 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==13 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==12 && t2data2[t2pass12+11]==t23num2+30){
+      t2numnew=9;
+      t23num2=t23num2-1;
+      }
+      t23num2=t23num2+1;
+      }
+      while(t23num<10 && t2numnew==9 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==13 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==12 && t2data2[t2pass12+10]==t23num+30){
+      t2numnew=10;
+      t23num=t23num-1;
+      }
+      t23num=t23num+1;
+      }
+      if(t2data2[t2pass12]==13 && t2data2[t2pass12+1]==21 && t2data2[t2pass12+2]==12 && t2data2[t2pass12+3]==t2num+30 && t2data2[t2pass12+4]==t2num2+30 && t2data2[t2pass12+5]==t2num3+30 && t2data2[t2pass12+6]==t2num4+30 && t2data2[t2pass12+7]==t2num5+30 && t2data2[t2pass12+8]==20 && t2data2[t2pass12+9]==15 && t2data2[t2pass12+10]==t23num+30 && t2data2[t2pass12+11]==t23num2+30 && t2data2[t2pass12+12]==t23num3+30 && t2data2[t2pass12+13]==t23num4+30 && t2data2[t2pass12+14]==t23num5+30 && t2numnew==10){
+      t2vap2=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2vap3=(t23num*10000)+(t23num2*1000)+(t23num3*100)+(t23num4*10)+(t23num5);
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap2==t2vara[t2variablecount]){
+      t2vap22=t2varavalue[t2variablecount];
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap3==t2vara[t2variablecount]){
+      t2vap33=t2varavalue[t2variablecount];
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      t2vap33=t2vap33*t2vap22;
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap3==t2vara[t2variablecount]){
+      t2varavalue[t2variablecount]=t2vap33;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      //14 because it will increase ny 1 at the end
+      t2pass12=t2pass12+14;
+      t2numnew=0;
+      }
+      //div
+      t23num5=0; t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0; t23num4=0; t23num3=0; t23num2=0; t23num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==4 && t2data2[t2pass12+1]==9 && t2data2[t2pass12+2]==22 && t2data2[t2pass12+7]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==4 && t2data2[t2pass12+1]==9 && t2data2[t2pass12+2]==22 && t2data2[t2pass12+6]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==4 && t2data2[t2pass12+1]==9 && t2data2[t2pass12+2]==22 && t2data2[t2pass12+5]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==4 && t2data2[t2pass12+1]==9 && t2data2[t2pass12+2]==22 && t2data2[t2pass12+4]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==4 && t2data2[t2pass12+1]==9 && t2data2[t2pass12+2]==22 && t2data2[t2pass12+3]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      while(t23num5<10 && t2numnew==5 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==4 && t2data2[t2pass12+1]==9 && t2data2[t2pass12+2]==22 && t2data2[t2pass12+14]==t23num5+30){
+      t2numnew=6;
+      t23num5=t23num5-1;
+      }
+      t23num5=t23num5+1;
+      }
+      while(t23num4<10 && t2numnew==6 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==4 && t2data2[t2pass12+1]==9 && t2data2[t2pass12+2]==22 && t2data2[t2pass12+13]==t23num4+30){
+      t2numnew=7;
+      t23num4=t23num4-1;
+      }
+      t23num4=t23num4+1;
+      }
+      while(t23num3<10 && t2numnew==7 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==4 && t2data2[t2pass12+1]==9 && t2data2[t2pass12+2]==22 && t2data2[t2pass12+12]==t23num3+30){
+      t2numnew=8;
+      t23num3=t23num3-1;
+      }
+      t23num3=t23num3+1;
+      }
+      while(t23num2<10 && t2numnew==8 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==4 && t2data2[t2pass12+1]==9 && t2data2[t2pass12+2]==22 && t2data2[t2pass12+11]==t23num2+30){
+      t2numnew=9;
+      t23num2=t23num2-1;
+      }
+      t23num2=t23num2+1;
+      }
+      while(t23num<10 && t2numnew==9 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==4 && t2data2[t2pass12+1]==9 && t2data2[t2pass12+2]==22 && t2data2[t2pass12+10]==t23num+30){
+      t2numnew=10;
+      t23num=t23num-1;
+      }
+      t23num=t23num+1;
+      }
+      if(t2data2[t2pass12]==4 && t2data2[t2pass12+1]==9 && t2data2[t2pass12+2]==22 && t2data2[t2pass12+3]==t2num+30 && t2data2[t2pass12+4]==t2num2+30 && t2data2[t2pass12+5]==t2num3+30 && t2data2[t2pass12+6]==t2num4+30 && t2data2[t2pass12+7]==t2num5+30 && t2data2[t2pass12+8]==20 && t2data2[t2pass12+9]==15 && t2data2[t2pass12+10]==t23num+30 && t2data2[t2pass12+11]==t23num2+30 && t2data2[t2pass12+12]==t23num3+30 && t2data2[t2pass12+13]==t23num4+30 && t2data2[t2pass12+14]==t23num5+30 && t2numnew==10){
+      t2vap2=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2vap3=(t23num*10000)+(t23num2*1000)+(t23num3*100)+(t23num4*10)+(t23num5);
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap2==t2vara[t2variablecount]){
+      t2vap22=t2varavalue[t2variablecount];
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap3==t2vara[t2variablecount]){
+      t2vap33=t2varavalue[t2variablecount];
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      t2vap33=t2vap33/t2vap22;
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap3==t2vara[t2variablecount]){
+      t2varavalue[t2variablecount]=t2vap33;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      //14 because it will increase ny 1 at the end
+      t2pass12=t2pass12+14;
+      t2numnew=0;
+      }
+      //equ
+      t23num5=0; t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0; t23num4=0; t23num3=0; t23num2=0; t23num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==5 && t2data2[t2pass12+1]==17 && t2data2[t2pass12+2]==21 && t2data2[t2pass12+7]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==5 && t2data2[t2pass12+1]==17 && t2data2[t2pass12+2]==21 && t2data2[t2pass12+6]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==5 && t2data2[t2pass12+1]==17 && t2data2[t2pass12+2]==21 && t2data2[t2pass12+5]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==5 && t2data2[t2pass12+1]==17 && t2data2[t2pass12+2]==21 && t2data2[t2pass12+4]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==5 && t2data2[t2pass12+1]==17 && t2data2[t2pass12+2]==21 && t2data2[t2pass12+3]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      while(t23num5<10 && t2numnew==5 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==5 && t2data2[t2pass12+1]==17 && t2data2[t2pass12+2]==21 && t2data2[t2pass12+14]==t23num5+30){
+      t2numnew=6;
+      t23num5=t23num5-1;
+      }
+      t23num5=t23num5+1;
+      }
+      while(t23num4<10 && t2numnew==6 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==5 && t2data2[t2pass12+1]==17 && t2data2[t2pass12+2]==21 && t2data2[t2pass12+13]==t23num4+30){
+      t2numnew=7;
+      t23num4=t23num4-1;
+      }
+      t23num4=t23num4+1;
+      }
+      while(t23num3<10 && t2numnew==7 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==5 && t2data2[t2pass12+1]==17 && t2data2[t2pass12+2]==21 && t2data2[t2pass12+12]==t23num3+30){
+      t2numnew=8;
+      t23num3=t23num3-1;
+      }
+      t23num3=t23num3+1;
+      }
+      while(t23num2<10 && t2numnew==8 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==5 && t2data2[t2pass12+1]==17 && t2data2[t2pass12+2]==21 && t2data2[t2pass12+11]==t23num2+30){
+      t2numnew=9;
+      t23num2=t23num2-1;
+      }
+      t23num2=t23num2+1;
+      }
+      while(t23num<10 && t2numnew==9 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==5 && t2data2[t2pass12+1]==17 && t2data2[t2pass12+2]==21 && t2data2[t2pass12+10]==t23num+30){
+      t2numnew=10;
+      t23num=t23num-1;
+      }
+      t23num=t23num+1;
+      }
+      if(t2data2[t2pass12]==5 && t2data2[t2pass12+1]==17 && t2data2[t2pass12+2]==21 && t2data2[t2pass12+3]==t2num+30 && t2data2[t2pass12+4]==t2num2+30 && t2data2[t2pass12+5]==t2num3+30 && t2data2[t2pass12+6]==t2num4+30 && t2data2[t2pass12+7]==t2num5+30 && t2data2[t2pass12+8]==20 && t2data2[t2pass12+9]==15 && t2data2[t2pass12+10]==t23num+30 && t2data2[t2pass12+11]==t23num2+30 && t2data2[t2pass12+12]==t23num3+30 && t2data2[t2pass12+13]==t23num4+30 && t2data2[t2pass12+14]==t23num5+30 && t2numnew==10){
+      t2vap2=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2vap3=(t23num*10000)+(t23num2*1000)+(t23num3*100)+(t23num4*10)+(t23num5);
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap2==t2vara[t2variablecount]){
+      t2vap22=t2varavalue[t2variablecount];
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap3==t2vara[t2variablecount]){
+      t2vap33=t2varavalue[t2variablecount];
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      t2vap33=t2vap22;
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap3==t2vara[t2variablecount]){
+      t2varavalue[t2variablecount]=t2vap33;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      //14 because it will increase ny 1 at the end
+      t2pass12=t2pass12+14;
+      t2numnew=0;
+      }
+
+      //example k0z00001is00030
+      if(t2keyg==26){
+      t23num5=0; t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0; t23num4=0; t23num3=0; t23num2=0; t23num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+7]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+6]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+5]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+4]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+3]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      while(t23num5<10 && t2numnew==5 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+14]==t23num5+30){
+      t2numnew=6;
+      t23num5=t23num5-1;
+      }
+      t23num5=t23num5+1;
+      }
+      while(t23num4<10 && t2numnew==6 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+13]==t23num4+30){
+      t2numnew=7;
+      t23num4=t23num4-1;
+      }
+      t23num4=t23num4+1;
+      }
+      while(t23num3<10 && t2numnew==7 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+12]==t23num3+30){
+      t2numnew=8;
+      t23num3=t23num3-1;
+      }
+      t23num3=t23num3+1;
+      }
+      while(t23num2<10 && t2numnew==8 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+11]==t23num2+30){
+      t2numnew=9;
+      t23num2=t23num2-1;
+      }
+      t23num2=t23num2+1;
+      }
+      while(t23num<10 && t2numnew==9 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+10]==t23num+30){
+      t2numnew=10;
+      t23num=t23num-1;
+      }
+      t23num=t23num+1;
+      }
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+3]==t2num+30 && t2data2[t2pass12+4]==t2num2+30 && t2data2[t2pass12+5]==t2num3+30 && t2data2[t2pass12+6]==t2num4+30 && t2data2[t2pass12+7]==t2num5+30 && t2data2[t2pass12+8]==9 && t2data2[t2pass12+9]==19 && t2data2[t2pass12+10]==t23num+30 && t2data2[t2pass12+11]==t23num2+30 && t2data2[t2pass12+12]==t23num3+30 && t2data2[t2pass12+13]==t23num4+30 && t2data2[t2pass12+14]==t23num5+30 && t2numnew==10){
+      t2vap2=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2vap3=(t23num*10000)+(t23num2*1000)+(t23num3*100)+(t23num4*10)+(t23num5);
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap2==t2vara[t2variablecount]){
+      t2varavalue[t2variablecount]=t2vap3;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      //14 because it will increase ny 1 at the end
+      t2pass12=t2pass12+14;
+      t2numnew=0;
+      t2keyg=0;
+      }
+      }
+      //example k0x00001is00030
+      if(t2keyg==24){
+      t23num5=0; t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0; t23num4=0; t23num3=0; t23num2=0; t23num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+7]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+6]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+5]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+4]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+3]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      while(t23num5<10 && t2numnew==5 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+14]==t23num5+30){
+      t2numnew=6;
+      t23num5=t23num5-1;
+      }
+      t23num5=t23num5+1;
+      }
+      while(t23num4<10 && t2numnew==6 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+13]==t23num4+30){
+      t2numnew=7;
+      t23num4=t23num4-1;
+      }
+      t23num4=t23num4+1;
+      }
+      while(t23num3<10 && t2numnew==7 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+12]==t23num3+30){
+      t2numnew=8;
+      t23num3=t23num3-1;
+      }
+      t23num3=t23num3+1;
+      }
+      while(t23num2<10 && t2numnew==8 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+11]==t23num2+30){
+      t2numnew=9;
+      t23num2=t23num2-1;
+      }
+      t23num2=t23num2+1;
+      }
+      while(t23num<10 && t2numnew==9 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+10]==t23num+30){
+      t2numnew=10;
+      t23num=t23num-1;
+      }
+      t23num=t23num+1;
+      }
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+3]==t2num+30 && t2data2[t2pass12+4]==t2num2+30 && t2data2[t2pass12+5]==t2num3+30 && t2data2[t2pass12+6]==t2num4+30 && t2data2[t2pass12+7]==t2num5+30 && t2data2[t2pass12+8]==9 && t2data2[t2pass12+9]==19 && t2data2[t2pass12+10]==t23num+30 && t2data2[t2pass12+11]==t23num2+30 && t2data2[t2pass12+12]==t23num3+30 && t2data2[t2pass12+13]==t23num4+30 && t2data2[t2pass12+14]==t23num5+30 && t2numnew==10){
+      t2vap2=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2vap3=(t23num*10000)+(t23num2*1000)+(t23num3*100)+(t23num4*10)+(t23num5);
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap2==t2vara[t2variablecount]){
+      t2varavalue[t2variablecount]=t2vap3;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      //14 because it will increase ny 1 at the end
+      t2pass12=t2pass12+14;
+      t2numnew=0;
+      t2keyg=0;
+      }
+      }
+      //example k0100001is00030
+      if(t2keyg==31){
+      t23num5=0; t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0; t23num4=0; t23num3=0; t23num2=0; t23num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+7]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+6]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+5]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+4]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+3]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      while(t23num5<10 && t2numnew==5 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+14]==t23num5+30){
+      t2numnew=6;
+      t23num5=t23num5-1;
+      }
+      t23num5=t23num5+1;
+      }
+      while(t23num4<10 && t2numnew==6 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+13]==t23num4+30){
+      t2numnew=7;
+      t23num4=t23num4-1;
+      }
+      t23num4=t23num4+1;
+      }
+      while(t23num3<10 && t2numnew==7 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+12]==t23num3+30){
+      t2numnew=8;
+      t23num3=t23num3-1;
+      }
+      t23num3=t23num3+1;
+      }
+      while(t23num2<10 && t2numnew==8 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+11]==t23num2+30){
+      t2numnew=9;
+      t23num2=t23num2-1;
+      }
+      t23num2=t23num2+1;
+      }
+      while(t23num<10 && t2numnew==9 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+10]==t23num+30){
+      t2numnew=10;
+      t23num=t23num-1;
+      }
+      t23num=t23num+1;
+      }
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+3]==t2num+30 && t2data2[t2pass12+4]==t2num2+30 && t2data2[t2pass12+5]==t2num3+30 && t2data2[t2pass12+6]==t2num4+30 && t2data2[t2pass12+7]==t2num5+30 && t2data2[t2pass12+8]==9 && t2data2[t2pass12+9]==19 && t2data2[t2pass12+10]==t23num+30 && t2data2[t2pass12+11]==t23num2+30 && t2data2[t2pass12+12]==t23num3+30 && t2data2[t2pass12+13]==t23num4+30 && t2data2[t2pass12+14]==t23num5+30 && t2numnew==10){
+      t2vap2=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2vap3=(t23num*10000)+(t23num2*1000)+(t23num3*100)+(t23num4*10)+(t23num5);
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap2==t2vara[t2variablecount]){
+      t2varavalue[t2variablecount]=t2vap3;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      //14 because it will increase ny 1 at the end
+      t2pass12=t2pass12+14;
+      t2numnew=0;
+      t2keyg=0;
+      }
+      }
+      //example k0200001is00030
+      if(t2keyg==32){
+      t23num5=0; t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0; t23num4=0; t23num3=0; t23num2=0; t23num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+7]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+6]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+5]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+4]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+3]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      while(t23num5<10 && t2numnew==5 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+14]==t23num5+30){
+      t2numnew=6;
+      t23num5=t23num5-1;
+      }
+      t23num5=t23num5+1;
+      }
+      while(t23num4<10 && t2numnew==6 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+13]==t23num4+30){
+      t2numnew=7;
+      t23num4=t23num4-1;
+      }
+      t23num4=t23num4+1;
+      }
+      while(t23num3<10 && t2numnew==7 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+12]==t23num3+30){
+      t2numnew=8;
+      t23num3=t23num3-1;
+      }
+      t23num3=t23num3+1;
+      }
+      while(t23num2<10 && t2numnew==8 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+11]==t23num2+30){
+      t2numnew=9;
+      t23num2=t23num2-1;
+      }
+      t23num2=t23num2+1;
+      }
+      while(t23num<10 && t2numnew==9 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+10]==t23num+30){
+      t2numnew=10;
+      t23num=t23num-1;
+      }
+      t23num=t23num+1;
+      }
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+3]==t2num+30 && t2data2[t2pass12+4]==t2num2+30 && t2data2[t2pass12+5]==t2num3+30 && t2data2[t2pass12+6]==t2num4+30 && t2data2[t2pass12+7]==t2num5+30 && t2data2[t2pass12+8]==9 && t2data2[t2pass12+9]==19 && t2data2[t2pass12+10]==t23num+30 && t2data2[t2pass12+11]==t23num2+30 && t2data2[t2pass12+12]==t23num3+30 && t2data2[t2pass12+13]==t23num4+30 && t2data2[t2pass12+14]==t23num5+30 && t2numnew==10){
+      t2vap2=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2vap3=(t23num*10000)+(t23num2*1000)+(t23num3*100)+(t23num4*10)+(t23num5);
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap2==t2vara[t2variablecount]){
+      t2varavalue[t2variablecount]=t2vap3;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      //14 because it will increase ny 1 at the end
+      t2pass12=t2pass12+14;
+      t2numnew=0;
+      t2keyg=0;
+      }
+      }
+      //example k0300001is00030
+      if(t2keyg==33){
+      t23num5=0; t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0; t23num4=0; t23num3=0; t23num2=0; t23num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+7]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+6]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+5]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+4]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+3]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      while(t23num5<10 && t2numnew==5 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+14]==t23num5+30){
+      t2numnew=6;
+      t23num5=t23num5-1;
+      }
+      t23num5=t23num5+1;
+      }
+      while(t23num4<10 && t2numnew==6 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+13]==t23num4+30){
+      t2numnew=7;
+      t23num4=t23num4-1;
+      }
+      t23num4=t23num4+1;
+      }
+      while(t23num3<10 && t2numnew==7 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+12]==t23num3+30){
+      t2numnew=8;
+      t23num3=t23num3-1;
+      }
+      t23num3=t23num3+1;
+      }
+      while(t23num2<10 && t2numnew==8 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+11]==t23num2+30){
+      t2numnew=9;
+      t23num2=t23num2-1;
+      }
+      t23num2=t23num2+1;
+      }
+      while(t23num<10 && t2numnew==9 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+10]==t23num+30){
+      t2numnew=10;
+      t23num=t23num-1;
+      }
+      t23num=t23num+1;
+      }
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+3]==t2num+30 && t2data2[t2pass12+4]==t2num2+30 && t2data2[t2pass12+5]==t2num3+30 && t2data2[t2pass12+6]==t2num4+30 && t2data2[t2pass12+7]==t2num5+30 && t2data2[t2pass12+8]==9 && t2data2[t2pass12+9]==19 && t2data2[t2pass12+10]==t23num+30 && t2data2[t2pass12+11]==t23num2+30 && t2data2[t2pass12+12]==t23num3+30 && t2data2[t2pass12+13]==t23num4+30 && t2data2[t2pass12+14]==t23num5+30 && t2numnew==10){
+      t2vap2=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2vap3=(t23num*10000)+(t23num2*1000)+(t23num3*100)+(t23num4*10)+(t23num5);
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap2==t2vara[t2variablecount]){
+      t2varavalue[t2variablecount]=t2vap3;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      //14 because it will increase ny 1 at the end
+      t2pass12=t2pass12+14;
+      t2numnew=0;
+      t2keyg=0;
+      }
+      }
+      //example k0400001is00030
+      if(t2keyg==34){
+      t23num5=0; t2num5=0; t2numnew=0; t2num4=0; t2num3=0; t2num2=0; t2num=0; t23num4=0; t23num3=0; t23num2=0; t23num=0;
+      while(t2num5<10 && t2numnew==0 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+7]==t2num5+30){
+      t2numnew=1;
+      t2num5=t2num5-1;
+      }
+      t2num5=t2num5+1;
+      }
+      while(t2num4<10 && t2numnew==1 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+6]==t2num4+30){
+      t2numnew=2;
+      t2num4=t2num4-1;
+      }
+      t2num4=t2num4+1;
+      }
+      while(t2num3<10 && t2numnew==2 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+5]==t2num3+30){
+      t2numnew=3;
+      t2num3=t2num3-1;
+      }
+      t2num3=t2num3+1;
+      }
+      while(t2num2<10 && t2numnew==3 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+4]==t2num2+30){
+      t2numnew=4;
+      t2num2=t2num2-1;
+      }
+      t2num2=t2num2+1;
+      }
+      while(t2num<10 && t2numnew==4 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+3]==t2num+30){
+      t2numnew=5;
+      t2num=t2num-1;
+      }
+      t2num=t2num+1;
+      }
+      while(t23num5<10 && t2numnew==5 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+14]==t23num5+30){
+      t2numnew=6;
+      t23num5=t23num5-1;
+      }
+      t23num5=t23num5+1;
+      }
+      while(t23num4<10 && t2numnew==6 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+13]==t23num4+30){
+      t2numnew=7;
+      t23num4=t23num4-1;
+      }
+      t23num4=t23num4+1;
+      }
+      while(t23num3<10 && t2numnew==7 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+12]==t23num3+30){
+      t2numnew=8;
+      t23num3=t23num3-1;
+      }
+      t23num3=t23num3+1;
+      }
+      while(t23num2<10 && t2numnew==8 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+11]==t23num2+30){
+      t2numnew=9;
+      t23num2=t23num2-1;
+      }
+      t23num2=t23num2+1;
+      }
+      while(t23num<10 && t2numnew==9 && t2pass12<t2data2.length){
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+10]==t23num+30){
+      t2numnew=10;
+      t23num=t23num-1;
+      }
+      t23num=t23num+1;
+      }
+      if(t2data2[t2pass12]==11 && t2data2[t2pass12+1]==30 && t2data2[t2pass12+2]==t2keyg && t2data2[t2pass12+3]==t2num+30 && t2data2[t2pass12+4]==t2num2+30 && t2data2[t2pass12+5]==t2num3+30 && t2data2[t2pass12+6]==t2num4+30 && t2data2[t2pass12+7]==t2num5+30 && t2data2[t2pass12+8]==9 && t2data2[t2pass12+9]==19 && t2data2[t2pass12+10]==t23num+30 && t2data2[t2pass12+11]==t23num2+30 && t2data2[t2pass12+12]==t23num3+30 && t2data2[t2pass12+13]==t23num4+30 && t2data2[t2pass12+14]==t23num5+30 && t2numnew==10){
+      t2vap2=(t2num*10000)+(t2num2*1000)+(t2num3*100)+(t2num4*10)+(t2num5);
+      t2vap3=(t23num*10000)+(t23num2*1000)+(t23num3*100)+(t23num4*10)+(t23num5);
+      t2variablecount=0;
+      while(t2variablecount<t2variable){
+      if(t2vap2==t2vara[t2variablecount]){
+      t2varavalue[t2variablecount]=t2vap3;
+      }
+      t2variablecount=t2variablecount+1;
+      }
+      //14 because it will increase ny 1 at the end
+      t2pass12=t2pass12+14;
+      t2numnew=0;
+      t2keyg=0;
+      }
+      }
+      if(t2data2[t2pass12]==3 && t2data2[t2pass12+1]==12 && t2data2[t2pass12+2]==15 && t2data2[t2pass12+3]==19 && t2data2[t2pass12+4]==5){
+      //t2result and t3result are zero for making read if 
+      t2result3=0; globalvar=1; 
+      t2result=0;
+      t2pass12=t2pass12+4;
+      }
+      }
+      t2pass12=t2pass12+1;
+      if(t2result3==1){
+      t2result3=2;
+      }
+      }
+      }
+      //display objects
+      if(t2symbolcursor==2 && t2pass12>=t2data2.length){
+      t2pb2=0; t2pbc2=0;
+      while(t2pbc2<t2acoordinatex){
+      t2pb2=((t2vy2[t2pbc2])*(16*4))+(t2vx2[t2pbc2]); //for making points on the screen
+      t2red[t2pb2]=t2vr2[t2pbc2]; t2green[t2pb2]=t2vg2[t2pbc2]; t2blue[t2pb2]=t2vb2[t2pbc2];
+      t2pbc2=t2pbc2+1;
+      }
+      t2pass12=0;
+      }
+      /*display objects for 1280x720 resolution
+      if(t2symbolcursor==2 && t2pass12>=t2data2.length){
+      t2pb2=0; t2pbc2=0;
+      while(t2pbc2<t2acoordinatex){
+      t2pb2=((t2vy2[t2pbc2])*(320))+(t2vx2[t2pbc2]);
+      t2red[t2pb2]=t2vr2[t2pbc2]; t2green[t2pb2]=t2vg2[t2pbc2]; t2blue[t2pb2]=t2vb2[t2pbc2];
+      t2pbc2=t2pbc2+1;
+      }
+      t2pass12=0;
+      }
+      */
+      //sheet open code and example- mode open sheet sheet1
+      if(t2symbolcursor==1 && t2run2==1){
+      t2symbola2=t2symbola;
+      t2pass4=0;
+      t2passn2=0;
+      while(t2pass4<t2sn3){
+      if(t2symbola[t2pass4]==13 && t2symbola[t2pass4+1]==15 && t2symbola[t2pass4+2]==4 && t2symbola[t2pass4+3]==5 && t2symbola[t2pass4+5]==15 && t2symbola[t2pass4+6]==16 && t2symbola[t2pass4+7]==5 && t2symbola[t2pass4+8]==14){
+      t2p221=t2symbola[t2pass4+10];
+      t2p222=t2symbola[t2pass4+11];
+      t2p223=t2symbola[t2pass4+12];
+      t2p224=t2symbola[t2pass4+13];
+      t2p225=t2symbola[t2pass4+14];
+      t2pass4=t2sn3+1;
+      }
+      t2pass4=t2pass4+1;
+      }
+      t2pass5=0; 
+      t2sn4=t2sn3;
+      t2textheightcopy=t2textheight;
+      t2textheight2copy=t2textheight2;
+      t2textheight=0;
+      t2sn3=0;
+      while(t2pass5<t2data2.length){
+      if(t2passn2==0 && t2data2[t2pass5]==19 && t2data2[t2pass5+1]==8 && t2data2[t2pass5+2]==5 && t2data2[t2pass5+3]==5 && t2data2[t2pass5+4]==20 && t2data2[t2pass5+5]==t2p221 && t2data2[t2pass5+6]==t2p222 && t2data2[t2pass5+7]==t2p223 && t2data2[t2pass5+8]==t2p224 && t2data2[t2pass5+9]==t2p225){
+      t2passn2=1;
+      }
+      if(t2passn2==1){
+      t2sn3=t2sn3+1;
+      if(t2sn3>(t2textheight+1)*74){
+      t2textheight=t2textheight+1;
+      }
+      t2symbola3[t2pass5]=t2data2[t2pass5];
+      }
+      if(t2pass5==t2data2.length-1 && t2passn2==1){
+      t2symbola=t2symbola3;
+      t2pass5=t2data2.length+2;
+      t2run2=2;
+      }
+      if(t2passn2==1 && t2data2[t2pass5+1]==19 && t2data2[t2pass5+2]==8 && t2data2[t2pass5+3]==5 && t2data2[t2pass5+4]==5 && t2data2[t2pass5+5]==20){
+      t2symbola=t2symbola3;
+      t2pass5=t2data2.length+2;
+      t2run2=2;
+      }
+      t2sn3=t2sn3+1;
+      t2pass5=t2pass5+1;
+      }
+      
+      
+
+      }
+      while(t2height<720 && t2width<1280 && t2run==2 && t2symbolcursor==2){
+      ctx.fillStyle = "rgb("+t2red[p]+" "+t2green[p]+" "+t2blue[p]+")";
+      ctx.fillRect(t2width,t2height,80/4,80/4);
+      if(t2width<1280){
+      t2width=t2width+(80/4); 
+      p=p+1;
+      }
+      if(t2width>=1280 && t2height<720){
+      t2width=0;
+      t2height=t2height+(80/4);
+      }    
+      }
+      t2width=0;
+      t2height=0;
+      p=0;
+      t2p2=0;
+      t2sn2=0;
+      t2textheight2=1;
+      t2textheightequal=0;
+      t2textheightequal2=0;
+      while(t2p2<57600 && t2symbolcursor!=2 && t2d22==0){
+      t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
+      t2p2=t2p2+1;
+      }
+      if(t2d22==0 && t2symbolcursor!=2){
+      t2d22=1;
+      }
+      while(t2height<720 && t2width<1280 && t2symbolcursor!=2 && t2d22==1){
+      ctx.fillStyle = "rgb("+t2red[p]+" "+t2green[p]+" "+t2blue[p]+")";
+      ctx.fillRect(t2width,t2height,4,4);
+      if(t2width<1280){
+      t2width=t2width+4; 
+      p=p+1;
+      }
+      if(t2width>=1280 && t2height<720){
+      t2width=0;
+      t2height=t2height+4;
+      }    
+      }
+      t2width=0;
+      t2height=0;
+      p=0;
+      t2p2=0;
+      t2sn2=0;
+      t2textheight2=1;
+      t2textheightequal=0;
+      t2textheightequal2=0;
+      requestAnimationFrame(rajneetwebos);
+      }
+      rajneetwebos();
+      </script>
+  </body>
+</html>
