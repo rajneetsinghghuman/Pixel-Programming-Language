@@ -14,9 +14,9 @@ mode save Press -key(minus key)
 
 Press `key(which is this ~ key on the keyboard) to display the sheet data on the webpage after saving that sheet.
 
-Copy this data into a array named t2data2 and save it with the file name data2.js
+Copy this data into a array named t2data2 and save it with the file name data.js
 Copy the data of new sheets in this array without deleting the previous data.
-If a sheet needs to be deleted find the sheet using the sheet symbols in the Rajneet Web os.html program code.
+If a sheet needs to be deleted find the sheet using the sheet symbols in the Pixel Programmming Language.html program code.
 See the code using notepad. Use notepad for all the above functions.
 
 Example program-
