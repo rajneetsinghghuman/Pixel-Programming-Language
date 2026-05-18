@@ -55,6 +55,8 @@ let t2syssa=[]; let t2aa=0; let t2aa2=0; let t2aa3=0;  let t2output=[]; let t2pa
       t2red[t2p2]=t2red2; t2green[t2p2]=t2green2; t2blue[t2p2]=t2blue2;
       t2p2=t2p2+1;
       }
+if(t2x2>7+(74*4)){t2x2=7; t2y2=t2y2+9; t2sn=t2sn-1;}
+if(t2x<=7+(74*4)){
       if(t2symbolcursor==1 && t2backspace==1){
       t2p2=(t2y2*320)+t2x2+3;
       t2red[t2p2]=16; t2green[t2p2]=244; t2blue[t2p2]=54;
@@ -986,12 +988,12 @@ textToSave ="let t2data2=["+t2output+"];";
       t2spacekey2=1;
       key3="aahhhhhh";
       }
-      if(t2x<=12 && t2spacekey2==1){
-      t2spacekey2=0;
-      key3="Backspace";
-      }
-      if(t2x>=7 && t2spacekey2==1){
+      if(t2spacekey2==1){
       key3=" ";
+      }
+      if(t2x>=7+74*4 && t2spacekey2==1){
+      t2spacekey2=0;
+      key3="Backspace"; key3="aaahhhh";
       }
       if(key3=="/"){ 
       if(t2symbolcursor==20 && t2aa<=t2aa2){
@@ -1011,6 +1013,7 @@ textToSave ="let t2data2=["+t2output+"];";
       t2run2=0;
       key3="aah";
       }
+ 
       //input key
       if(t2symbolcursor==1){
       if(key3=="a"){ 
@@ -1232,7 +1235,7 @@ textToSave ="let t2data2=["+t2output+"];";
       }
       }
       //text identifier
-      if(t2symbolcursor==1){
+      if(t2symbolcursor==1 && t2symbol!=40){
       if(key2=="ArrowUp" && t2y2>15){ 
       t2y2=t2y2-9;
       t2sn=t2sn-74;
@@ -1257,7 +1260,7 @@ textToSave ="let t2data2=["+t2output+"];";
       t2x2=t2x2-4;
       key2="aahh";
       }
-      if(key2=="ArrowRight" && t2x2<303){ 
+      if(key2=="ArrowRight" && t2x2<297){ 
       if(t2y2==t2y && t2x2<=t2x-4){
       t2sn=t2sn+1;
       t2x2=t2x2+4;
@@ -1269,6 +1272,7 @@ textToSave ="let t2data2=["+t2output+"];";
       key2="aahh";
       }
       }
+}
       if(t2symbolcursor==1 && key2=="aahh"){
       t2backspace=1;
       key2="aahhh";
@@ -1291,6 +1295,7 @@ textToSave ="let t2data2=["+t2output+"];";
       if(t2symbolcursor==2 && key2=="ArrowLeft"){
       t2keyg=34;
       }
+
       //save sheet
       if(t2symbolcursor==1 && t2run==1){
       t2pass2=0;
